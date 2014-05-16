@@ -155,7 +155,7 @@ class Application{
         $this->sm->assign('_template', $tpl);
        // $this->sm->assign('_notes', $notes->get($tpl));
         echo $this->sm->fetch($layout.'.tpl');
-        //if($_GET['_debug'] == 'true'){
+        if($_GET['_debug'] == 'true'){
             echo "<h2>Smarty</h2>";
             dump($this->sm->getTemplateVars());
             echo "<h2>SESSION</h2>";
@@ -167,7 +167,7 @@ class Application{
             echo "<h2>OTHER</h2>";
             echo "<h3>Plugins Dir(s)</h3>";
             dump($this->sm->getPluginsDir());
-        //}
+        }
     }
 }
 
